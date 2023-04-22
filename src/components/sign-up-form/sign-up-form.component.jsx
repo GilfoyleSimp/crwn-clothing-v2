@@ -20,7 +20,6 @@ const SignUpForm = () => {
         setFormFields({...formFields, [name]: value}); //name being what was set as an attribute. 
         // so this is basically setting e.g. displayName = value of the state
     }
-    console.log(formFields);
 
     const resetFormFields = () => {
         setFormFields(defaultFormFields);
