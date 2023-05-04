@@ -4,14 +4,14 @@ import FormInput from "../form-input/form-input.component";
 import './sign-up-form.styles.scss';
 import Button from "../button/button.component";
 
+const defaultFormFields = {
+    'displayName': '',
+    'email': '',
+    'password': '',
+    'confirmPassword': ''
+};
 const SignUpForm = () => {
 
-    const defaultFormFields = {
-        'displayName': '',
-        'email': '',
-        'password': '',
-        'confirmPassword': ''
-    };
     const [formFields, setFormFields] = useState(defaultFormFields);
     const {displayName, email, password, confirmPassword} = formFields;
 
@@ -20,6 +20,7 @@ const SignUpForm = () => {
         setFormFields({...formFields, [name]: value}); //name being what was set as an attribute. 
         // so this is basically setting e.g. displayName = value of the state
     }
+
 
     const resetFormFields = () => {
         setFormFields(defaultFormFields);
