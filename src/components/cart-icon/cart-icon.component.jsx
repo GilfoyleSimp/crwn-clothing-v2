@@ -5,15 +5,16 @@ import { CartContext  } from '../../contexts/cart.context'
 
 const CartIcon = () =>{
     
-    const { isCartOpen, setIsCartOpen } = useContext(CartContext)
+    const { isCartOpen, setIsCartOpen, cartItems, cartCount } = useContext(CartContext)
     const toggle = () =>{
         setIsCartOpen(!isCartOpen)
     }
 
+
     return (
         <div className='cart-icon-container' onClick={toggle}>
             <ShoppingIcon className='shopping-icon'/>
-            <span className='item-count'>10</span>
+            <span className='item-count'>{cartCount}</span>
         </div>
     )
 }
